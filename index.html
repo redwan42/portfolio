@@ -1,27 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Mon Portfolio (début total)</title>
-</head>
-<body>
-  <h1>Mon Portfolio</h1>
-  <p>Salut, je m'appelle <strong>Redwan</strong>.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio | Redwan</title>
+  </head>
 
-  <h2>À propos</h2>
-  <p>Portofolio</p>
+  <body>    
+    <!-- NAVBAR -->
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#about">Redwan</a></div>
+        <ul>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <h2>Mes projets</h2>
-  <ul>
-    <li>Projet 1 :  page très simple — <a href="#">voir</a></li>
-    <li>Projet 2 :  CV — <a href="#">voir</a></li>
-    <li>Projet 3 : liens et images — <a href="#">voir</a></li>
-  </ul>
+    <!-- À PROPOS -->
+    <section class="section" id="about">
+      <div class="section__container">
+        <div class="content">
+          <h1 class="title">
+            <span>Redwan</span><br />
+            Développeur Web
+          </h1>
 
-  <h2>Contact</h2>
-  <p>  : <a href="email@example.com">ton.email@example.com</a></p>
+          <p class="description">
+            Salut ! Moi c’est <strong>Redwan</strong>, étudiant en licence de maths
+            et développeur web à côté. J’aime combiner la logique des maths avec
+            la créativité du design pour créer des sites modernes, simples et
+            efficaces.
+          </p>
 
-  <hr>
-  <p></p>
-</body>
+          <p class="description">
+            🎓 <strong>Expérience :</strong> Licence de mathématiques – ULCO
+          </p>
+        </div>
+
+        <div class="image">
+          <img src="images/pp2.png" alt="Photo de profil" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <h2>Skills</h2>
+      <p>Ce que je sais faire + ce que j’apprends.</p>
+
+      <div class="skills-container">
+        <div class="skills-box">
+          <h3>Tech</h3>
+          <ul>
+            <li>HTML / CSS (responsive, flex, grid)</li>
+            <li>JavaScript (DOM, events)</li>
+            <li>Python (bases, fonctions, boucles)</li>
+            <li>Git (bientôt 👀)</li>
+          </ul>
+        </div>
+
+        <div class="skills-box">
+          <h3>Soft skills</h3>
+          <ul>
+            <li>Travail régulier</li>
+            <li>Apprentissage rapide</li>
+            <li>Organisation & objectifs</li>
+            <li>Debug jusqu’au bout</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section class="projects" id="projects">
+      <h2>Projets</h2>
+      <p>Quelques projets personnels.</p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="images/projet1.png" alt="Portfolio HTML CSS" />
+          </div>
+          <h3>Portfolio HTML / CSS</h3>
+          <p>Site portfolio responsive avec un design simple et moderne.</p>
+          <div class="project-actions">
+            <a class="btn-ghost" href="#">GitHub</a>
+            <a class="btn" href="#">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-thumb">
+            <img src="images/projet2.png" alt="Jeu Python" />
+          </div>
+          <h3>Jeu Python</h3>
+          <p>Petit jeu codé en Python utilisant logique et boucles.</p>
+          <div class="project-actions">
+            <a class="btn-ghost" href="#">GitHub</a>
+            <a class="btn" href="#">Live Demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2 class="contact-title">Me contacter</h2>
+
+      <div class="contact-container">
+        <a href="mailto:redwan.dev@gmail.com" class="contact-item">
+          <i class="ri-mail-line"></i>
+          <span>redwan.dev@gmail.com</span>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          class="contact-item"
+        >
+          <i class="ri-linkedin-box-fill"></i>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </section>
+  </body>
 </html>
