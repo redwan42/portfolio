@@ -38,19 +38,12 @@ nav .logo a{
   transition:.3s;
 }
 nav .logo a:hover{color:var(--primary-color-dark);}
-nav input{display:none;}
-nav .checkbox{display:none;}
-nav .checkbox i{
-  font-size:2rem;
-  color:var(--primary-color);
-  cursor:pointer;
-}
+
 nav ul{
   display:flex;
   align-items:center;
   gap:1rem;
   list-style:none;
-  transition:left .3s;
 }
 nav ul li a{
   padding:.5rem 1rem;
@@ -66,9 +59,13 @@ nav ul li a:hover{
 }
 
 /* ABOUT / HERO */
-.section{background:var(--bg-light);}
+.section{
+  background:var(--bg-light);
+  /* évite que le contenu passe sous la navbar fixed */
+  padding-top:90px;
+}
 .section__container{
-  min-height:100vh;
+  min-height:calc(100vh - 90px);
   max-width:var(--max-width);
   margin:0 auto;
   padding:1rem;
@@ -80,12 +77,6 @@ nav ul li a:hover{
   display:flex;
   flex-direction:column;
   justify-content:center;
-}
-.subtitle{
-  letter-spacing:2px;
-  color:var(--text-light);
-  font-weight:600;
-  margin-bottom:.5rem;
 }
 .title{
   font-size:2.5rem;
@@ -116,22 +107,6 @@ nav ul li a:hover{
   color:var(--primary-color);
   font-weight:600;
 }
-.action__btns{display:flex;gap:1rem;}
-.action__btns button{
-  font-size:1rem;
-  font-weight:600;
-  letter-spacing:2px;
-  padding:1rem 2rem;
-  border:2px solid var(--primary-color);
-  border-radius:10px;
-  background:transparent;
-  cursor:pointer;
-  transition:.3s;
-}
-.hire__me{background:var(--primary-color);color:#fff;}
-.hire__me:hover{background:var(--primary-color-dark);}
-.portfolio{color:var(--primary-color);}
-.portfolio:hover{background:var(--primary-color-dark);color:#fff;}
 .image{display:grid;place-items:center;}
 .image img{width:min(25rem,90%);border-radius:100%;}
 
@@ -147,11 +122,6 @@ nav ul li a:hover{
   font-weight:700;
   margin-bottom:1rem;
   color:#1e1e1e;
-}
-.skills p{
-  color:#4b5563;
-  margin-bottom:3rem;
-  font-size:1.1rem;
 }
 .skills-container{
   display:grid;
@@ -261,12 +231,6 @@ nav ul li a:hover{
   text-align:center;
   padding:6rem 1rem;
 }
-.contact-subtitle{
-  font-size:1rem;
-  color:#6b7280;
-  margin-bottom:.5rem;
-  letter-spacing:1px;
-}
 .contact-title{
   font-size:2.5rem;
   font-weight:700;
@@ -305,30 +269,15 @@ nav ul li a:hover{
 }
 .contact-item:hover i{color:#4338ca;}
 
-/* RESPONSIVE (REGROUPÉ) */
+/* RESPONSIVE */
 @media (width < 750px){
-  nav .checkbox{display:block;}
-  nav ul{
-    position:absolute;
-    width:100%;
-    height:calc(100vh - 85px);
-    top:85px;
-    left:-100%;
-    background:var(--bg-light);
-    flex-direction:column;
-    justify-content:center;
-    gap:3rem;
-  }
-  nav #check:checked ~ ul{left:0;}
-  nav ul li a{font-size:1.25rem;}
-
   .section__container{
-    padding:10rem 1rem 5rem;
+    padding:2rem 1rem 5rem;
     text-align:center;
     grid-template-columns:1fr;
+    gap:2rem;
   }
   .image{grid-area:1/1/2/2;}
-  .action__btns{margin:0 auto;justify-content:center;}
 
   .skills{text-align:center;}
   .skills-box ul{list-style:none;margin-left:0;padding:0;}
